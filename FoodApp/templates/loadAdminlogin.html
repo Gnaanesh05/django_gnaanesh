@@ -1,0 +1,31 @@
+{%extends 'base.html' %}
+{%load static %}
+{%block content %}
+<div class="content mt-4">
+    <h3> Weclome to Admin login</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <form action="Alogin" method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="username">Username:</label>
+                    <input type="text" name="uname">
+            
+                </div>
+                <div class="mb-3">
+            
+                    <label for="password">Password:</label>
+                    <input type="password" name="passwd"><br><br>
+                </div>
+            
+                <button class="btn btn-success">SigIn</button>
+            
+            </form>
+            
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
